@@ -245,6 +245,26 @@
       margin-top: 2rem;
       font-size: 0.92rem; line-height: 1.95; color: var(--text);
     }
+    .positive-note {
+      background: #EAF3EE;
+      border-left: 4px solid var(--green);
+      padding: 20px 24px; border-radius: 0 8px 8px 0;
+      margin-top: 1.2rem;
+    }
+    .positive-note .pn-title {
+      font-size: 0.82rem; font-weight: 700; color: var(--green);
+      margin-bottom: 12px; letter-spacing: 0.03em;
+    }
+    .positive-note .pn-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px;
+    }
+    .positive-note .pn-grid span {
+      font-size: 0.82rem; color: var(--text); line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 5px;
+    }
+    .positive-note .pn-grid span::before {
+      content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0;
+    }
 
     /* ===== COMPARE TABLE ===== */
     .compare-section { background: var(--white); }
@@ -765,12 +785,12 @@
           <div class="stat-card reveal">
             <div class="stat-num">約<span style="font-size:2.4rem">7</span>割</div>
             <div class="stat-label">の市販子ども靴が<br>足に悪影響の可能性</div>
-            <div class="stat-src">足育専門家による指摘</div>
+            <div class="stat-src">日独小児靴学研究会（JAGSS）の見解</div>
           </div>
           <div class="stat-card reveal">
-            <div class="stat-num">3<sup style="font-size:1.2rem">歳</sup></div>
-            <div class="stat-label">までの靴選びが<br>特に影響する時期</div>
-            <div class="stat-src">小児整形外科の共通見解</div>
+            <div class="stat-num">6<sup style="font-size:1.2rem">歳</sup></div>
+            <div class="stat-label">までに足の発育の<br>土台が決まると言われる</div>
+            <div class="stat-src">日独小児靴学研究会（JAGSS）の提言</div>
           </div>
         </div>
         <div class="fear-note reveal">
@@ -778,6 +798,17 @@
           「量販店で買ったから大丈夫」——<br>
           その判断が、気づかないうちにお子さんの足を変えていることがあります。<br><br>
           足が柔らかく変形しやすいこの時期だからこそ、<strong>専門家による正しい靴選び</strong>が必要です。
+        </div>
+        <div class="positive-note reveal">
+          <p class="pn-title">正しい靴で、こんな変化が生まれています</p>
+          <div class="pn-grid">
+            <span>自分からよく歩くようになった</span>
+            <span>走るのが速くなった</span>
+            <span>抱っこを求めなくなった</span>
+            <span>姿勢・歩き方がきれいになった</span>
+            <span>スポーツが好きになった</span>
+            <span>元気いっぱい動き回るようになった</span>
+          </div>
         </div>
       </div>
       <div class="problem-photo-col reveal">
@@ -857,7 +888,7 @@
 <section class="points-section section">
   <div class="section-inner tc">
     <span class="eyebrow">カウンセリングの内容</span>
-    <h2 class="stitle">初回カウンセリングで<br>行うこと。</h2>
+    <h2 class="stitle">小児靴カウンセラーによる<br>初回カウンセリングで行うこと。</h2>
     <p class="slead">小児靴カウンセラー（小堤先生）が、お子さんの足を多角的に診て、本当に合う一足を導き出します。</p>
     <div class="points-grid">
       <div class="point-card reveal">
@@ -992,6 +1023,10 @@
             <h4>軽量・柔軟なソール</h4>
             <p>子どもの足に余計な負担をかけず、自然な動きを妨げないソール設計です。</p>
           </div>
+          <div class="sf-feat" style="border-left:3px solid var(--green);background:#EAF3EE;">
+            <h4 style="color:var(--green)">国内でも有数のスーパーフィット取扱モデル数</h4>
+            <p>足型・成長段階・歩行の特長に合わせて選べる豊富なラインナップを在庫。カウンセリング結果に応じて最適な一足をその場でご提案できるのが、LADIES'KIDならではの強みです。</p>
+          </div>
         </div>
         <div class="sf-price">
           子ども靴 価格帯（目安）<br>
@@ -1097,18 +1132,17 @@
   <div class="section-inner tc">
     <span class="eyebrow">お客様の声</span>
     <h2 class="stitle">実際にご来店された<br>保護者の方の声</h2>
-    <p class="slead">（実際のお客様の声は許諾をいただき順次掲載予定です）</p>
     <div class="voice-grid">
       <div class="voice-card reveal">
-        <img src="https://ladieskid.jp/i288/img/2020/Children/kid_img.jpg" alt="子ども靴">
+        <img src="https://ladieskid.jp/i288/img/2020/Children/run_img.jpg" alt="子ども走る">
         <div class="voice-card-body">
           <div class="voice-qmark">"</div>
-          <p class="voice-text">保育園で「浮き指かも」と言われ来店しました。小堤先生に歩き方を診ていただき、足に合ったスーパーフィットを選んでもらって2ヶ月。先生から「改善してきていますよ」と言っていただけました。</p>
-          <p class="voice-meta">M.S. 様（4歳のお子様の保護者）</p>
+          <p class="voice-text">子どもの靴屋で購入した靴・サンダルによって足の形や歩き方に左右差が出てきたため来店しました。専門的に詳しく見てくださり、気になっていた問題点が解決して感謝！！ぴったりフィットする靴を購入したら、よく歩いてくれるようになり、以前より抱っこをせがまなくなりました。感動でいっぱいです。</p>
+          <p class="voice-meta">（Googleマップ口コミ）</p>
         </div>
       </div>
       <div class="voice-card reveal">
-        <img src="https://ladieskid.jp/i288/img/2020/Children/family2.png" alt="ファミリー来店">
+        <img src="https://ladieskid.jp/i288/img/2020/Children/kids_img.jpg" alt="子ども靴カウンセリング">
         <div class="voice-card-body">
           <div class="voice-qmark">"</div>
           <p class="voice-text">ファーストシューズ選びで来店。量販店では「これでいいですよ」と言われるだけでしたが、こちらでは足の幅・甲の高さを丁寧に計測していただき、何が合うかを説明してもらいました。</p>
