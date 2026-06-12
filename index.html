@@ -245,25 +245,65 @@
       margin-top: 2rem;
       font-size: 0.92rem; line-height: 1.95; color: var(--text);
     }
-    .positive-note {
-      background: #EAF3EE;
-      border-left: 4px solid var(--green);
-      padding: 20px 24px; border-radius: 0 8px 8px 0;
-      margin-top: 1.2rem;
+    /* aspiration block */
+    .aspiration-block {
+      background: #fff; border: 2px solid var(--green); border-radius: 10px;
+      padding: 22px 24px; margin-top: 1.4rem;
     }
-    .positive-note .pn-title {
-      font-size: 0.82rem; font-weight: 700; color: var(--green);
-      margin-bottom: 12px; letter-spacing: 0.03em;
+    .asp-title {
+      font-size: 0.72rem; font-weight: 700; color: var(--green);
+      letter-spacing: 0.1em; margin-bottom: 14px; text-transform: uppercase;
     }
-    .positive-note .pn-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px;
+    .asp-wishes { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .asp-wish {
+      font-size: 0.96rem; font-weight: 700; color: var(--text);
+      padding: 10px 14px; background: #EAF3EE; border-radius: 6px;
+      display: flex; align-items: center; gap: 8px;
     }
-    .positive-note .pn-grid span {
-      font-size: 0.82rem; color: var(--text); line-height: 1.6;
-      display: flex; align-items: flex-start; gap: 5px;
+    .asp-wish::before { content: "✦"; color: var(--green); flex-shrink: 0; }
+    .asp-lead {
+      font-size: 0.82rem; color: var(--text-mid); line-height: 1.8;
+      border-top: 1px solid #c8e0d0; padding-top: 12px; margin-top: 4px;
     }
-    .positive-note .pn-grid span::before {
-      content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0;
+    /* parent voice */
+    .parent-voice {
+      margin-top: 1.2rem; padding: 18px 22px;
+      background: var(--cream); border-radius: 8px;
+    }
+    .pv-quote {
+      font-size: 2.6rem; color: var(--gold); line-height: 0.6;
+      display: block; margin-bottom: 10px; font-family: Georgia, serif;
+    }
+    .parent-voice p {
+      font-size: 1rem; font-weight: 700; color: var(--text);
+      line-height: 1.75; margin: 0;
+    }
+    .parent-voice footer {
+      font-size: 0.72rem; color: var(--text-light); margin-top: 10px;
+    }
+    .parent-voice-sub {
+      font-size: 0.82rem; color: var(--text-mid); line-height: 1.8;
+      margin-top: 10px; padding: 0 2px;
+    }
+    /* worry block */
+    .worry-block {
+      margin-top: 1.2rem; padding: 18px 22px;
+      background: #FFF7F5; border-radius: 0 8px 8px 0;
+      border-left: 4px solid var(--coral);
+    }
+    .worry-title {
+      font-size: 0.76rem; font-weight: 700; color: var(--coral);
+      letter-spacing: 0.04em; margin-bottom: 10px;
+    }
+    .worry-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px; }
+    .worry-list span {
+      font-size: 0.85rem; color: var(--text);
+      display: flex; align-items: flex-start; gap: 7px;
+    }
+    .worry-list span::before { content: "…"; color: var(--coral); font-weight: 700; flex-shrink: 0; }
+    .worry-note {
+      font-size: 0.82rem; color: var(--text-mid); line-height: 1.8;
+      border-top: 1px solid #f0cdc8; padding-top: 10px;
     }
 
     /* ===== COMPARE TABLE ===== */
@@ -765,9 +805,9 @@
 <section class="problem-section section">
   <div class="section-inner">
     <div class="tc">
-      <span class="eyebrow">なぜ今、子どもの靴を見直すべきなのか</span>
-      <h2 class="stitle">子どもの足に、今<br>何が起きているか。</h2>
-      <p class="slead">足のトラブルは大人になってから現れるとは限りません。幼少期の靴選びが、生涯の足の健康を左右します。</p>
+      <span class="eyebrow">子どもの靴選びで、叶えられること</span>
+      <h2 class="stitle">スポーツができる子に。<br>よく歩く子に。<br>靴が、未来を変える。</h2>
+      <p class="slead">「スポーツできる子に育てたい」「まっすぐな脚になってほしい」——その願い、正しい靴選びで叶えられます。足が形成される6歳までの今が、最も大切な時期です。</p>
     </div>
     <div class="problem-layout">
       <div>
@@ -799,16 +839,29 @@
           その判断が、気づかないうちにお子さんの足を変えていることがあります。<br><br>
           足が柔らかく変形しやすいこの時期だからこそ、<strong>専門家による正しい靴選び</strong>が必要です。
         </div>
-        <div class="positive-note reveal">
-          <p class="pn-title">正しい靴で、こんな変化が生まれています</p>
-          <div class="pn-grid">
-            <span>自分からよく歩くようになった</span>
-            <span>走るのが速くなった</span>
-            <span>抱っこを求めなくなった</span>
-            <span>姿勢・歩き方がきれいになった</span>
-            <span>スポーツが好きになった</span>
-            <span>元気いっぱい動き回るようになった</span>
+        <div class="aspiration-block reveal">
+          <p class="asp-title">こんな願いを持つ親御さんへ</p>
+          <div class="asp-wishes">
+            <div class="asp-wish">スポーツができる子にしたい！</div>
+            <div class="asp-wish">まっすぐで綺麗な脚に育ってほしい</div>
+            <div class="asp-wish">元気いっぱい、よく歩く子になってほしい</div>
           </div>
+          <p class="asp-lead">「6歳まで」というのは制限ではありません。<strong>足の土台が形成されるこの時期に正しい靴を選ぶこと</strong>が、お子さんの願いを実現するための、最も確かな一歩です。<br>もちろんそれ以降でも、靴はからだの使い方に大きく影響します。スポーツや運動を思い切り楽しむためにも、強度のある靴は非常に大切です。</p>
+        </div>
+        <div class="parent-voice reveal">
+          <span class="pv-quote">"</span>
+          <p>靴で歩き方が変わった！<br>自分から良く歩くようになって、私も楽になりました♪</p>
+          <footer>— ご来店されたママの声</footer>
+        </div>
+        <p class="parent-voice-sub reveal">沢山歩くことは子どもの運動として最適であることはもちろん、<strong>抱っこをせがまれなくなる</strong>…ママ・パパにとっても嬉しい変化です！</p>
+        <div class="worry-block reveal">
+          <p class="worry-title">こんなお悩みはありませんか？</p>
+          <div class="worry-list">
+            <span>歩き方・走り方が気になる、これで良いのかな…</span>
+            <span>あまり歩きたがらない</span>
+            <span>すぐ「疲れた～抱っこ！」となってしまい大変</span>
+          </div>
+          <p class="worry-note">正しい靴選びをして、適切な靴を履かせることで、<strong>お悩みが解消されることがあります。</strong>まずはカウンセリングでお子さんの足の状態を確認することから始めましょう。</p>
         </div>
       </div>
       <div class="problem-photo-col reveal">
@@ -1025,8 +1078,8 @@
             <p>子どもの足に余計な負担をかけず、自然な動きを妨げないソール設計です。</p>
           </div>
           <div class="sf-feat" style="border-left:3px solid var(--green);background:#EAF3EE;">
-            <h4 style="color:var(--green)">国内でも有数のスーパーフィット取扱モデル数</h4>
-            <p>足型・成長段階・歩行の特長に合わせて選べる豊富なラインナップを在庫。カウンセリング結果に応じて最適な一足をその場でご提案できるのが、LADIES'KIDならではの強みです。</p>
+            <h4 style="color:var(--green)">日本トップクラスのモデル数を在庫</h4>
+            <p>国内でも有数のスーパーフィット取扱量を誇ります。足型・成長段階・歩行の特長に合わせて選べる多様なラインナップが揃っているからこそ、カウンセリング結果に応じた「最適な一足」をその場でご提案できる——これがLADIES'KIDの、<strong>簡単には真似できない強み</strong>です。</p>
           </div>
         </div>
         <div class="sf-price">
