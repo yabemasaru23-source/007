@@ -207,8 +207,15 @@
     .problem-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+      gap: 50px;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+    .positive-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
       margin-top: 2.5rem;
     }
     .stats-grid {
@@ -236,8 +243,8 @@
       width: 100%; border-radius: 8px; object-fit: cover;
       box-shadow: 0 4px 20px var(--shadow);
     }
-    .problem-photo-col img:first-child { height: 280px; }
-    .problem-photo-col img:last-child { height: 180px; }
+    .problem-photo-col img { height: 180px; }
+    .problem-photo-col img:first-child { height: 240px; }
     .fear-note {
       background: var(--coral-light);
       border-left: 4px solid var(--coral);
@@ -723,6 +730,7 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 860px) {
       .problem-layout { grid-template-columns: 1fr; }
+      .positive-layout { grid-template-columns: 1fr; }
       .counselor-layout { grid-template-columns: 1fr; }
       .sf-layout { grid-template-columns: 1fr; }
       .menu-cards { grid-template-columns: 1fr; }
@@ -809,6 +817,7 @@
       <h2 class="stitle">スポーツができる子に<br>よく歩く子に<br>靴が未来を変える</h2>
       <p class="slead">「スポーツできる子に育てたい」「まっすぐな脚になってほしい」——その願い、正しい靴選びで叶えられます。足が形成される6歳までの今が、最も大切な時期です。</p>
     </div>
+    <!-- 上段2カラム: 統計＋警告 ↔ 写真 -->
     <div class="problem-layout">
       <div>
         <div class="stats-grid">
@@ -839,15 +848,25 @@
           その判断が、気づかないうちにお子さんの足を変えていることがあります。<br><br>
           足が柔らかく変形しやすいこの時期だからこそ、<strong>専門家による正しい靴選び</strong>が必要です。
         </div>
-        <div class="aspiration-block reveal">
-          <p class="asp-title">こんな願いを持つ親御さんへ</p>
-          <div class="asp-wishes">
-            <div class="asp-wish">スポーツができる子にしたい！</div>
-            <div class="asp-wish">まっすぐで綺麗な脚に育ってほしい</div>
-            <div class="asp-wish">元気いっぱいよく歩く子になってほしい</div>
-          </div>
-          <p class="asp-lead">「6歳まで」というのは制限ではありません。<strong>足の土台が形成されるこの時期に正しい靴を選ぶこと</strong>が、お子さんの願いを実現するための、最も確かな一歩です。<br>もちろんそれ以降でも、靴はからだの使い方に大きく影響します。スポーツや運動を思い切り楽しむためにも、強度のある靴は非常に大切です。</p>
+      </div>
+      <div class="problem-photo-col reveal">
+        <img src="https://ladieskid.jp/i288/img/2020/Children/MV_img.jpg" alt="子ども靴カウンセリング">
+        <img src="https://ladieskid.jp/i288/img/2020/Children/run_img.jpg" alt="子ども走る">
+        <img src="https://ladieskid.jp/i288/img/2020/Children/girl_img.jpg" alt="子ども靴選び">
+      </div>
+    </div>
+    <!-- 下段2カラム: 願望 ↔ 親の声＋お悩み -->
+    <div class="positive-layout">
+      <div class="aspiration-block reveal">
+        <p class="asp-title">こんな願いを持つ親御さんへ</p>
+        <div class="asp-wishes">
+          <div class="asp-wish">スポーツができる子にしたい！</div>
+          <div class="asp-wish">まっすぐで綺麗な脚に育ってほしい</div>
+          <div class="asp-wish">元気いっぱいよく歩く子になってほしい</div>
         </div>
+        <p class="asp-lead">「6歳まで」というのは制限ではありません。<strong>足の土台が形成されるこの時期に正しい靴を選ぶこと</strong>が、お子さんの願いを実現するための、最も確かな一歩です。<br>もちろんそれ以降でも、靴はからだの使い方に大きく影響します。スポーツや運動を思い切り楽しむためにも、強度のある靴は非常に大切です。</p>
+      </div>
+      <div>
         <div class="parent-voice reveal">
           <span class="pv-quote">"</span>
           <p>靴で歩き方が変わった！<br>自分から良く歩くようになって、私も楽になりました♪</p>
@@ -863,10 +882,6 @@
           </div>
           <p class="worry-note">正しい靴選びをして、適切な靴を履かせることで、<strong>お悩みが解消されることがあります。</strong>まずはカウンセリングでお子さんの足の状態を確認することから始めましょう。</p>
         </div>
-      </div>
-      <div class="problem-photo-col reveal">
-        <img src="https://ladieskid.jp/i288/img/2020/Children/MV_img.jpg" alt="子ども靴カウンセリング">
-        <img src="https://ladieskid.jp/i288/img/2020/Children/run_img.jpg" alt="子ども走る">
       </div>
     </div>
   </div>
