@@ -369,6 +369,18 @@
       width: 100%; height: 200px; object-fit: cover;
       display: block;
     }
+    .point-card-img-wrap { position: relative; overflow: hidden; }
+    .point-card-img-wrap.hide-play::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: rgba(28,28,28,0.88);
+      z-index: 2;
+      pointer-events: none;
+    }
     .point-card-body {
       padding: 20px 18px;
     }
@@ -984,7 +996,9 @@
         </div>
       </div>
       <div class="point-card reveal">
-        <img src="./images/靴のご提案.png" alt="靴の提案">
+        <div class="point-card-img-wrap hide-play">
+          <img src="./images/靴のご提案.png" alt="靴の提案">
+        </div>
         <div class="point-card-body">
           <p class="point-card-num">STEP 04</p>
           <h3 class="point-card-title">靴のご提案・試着</h3>
@@ -1000,7 +1014,7 @@
         </div>
       </div>
       <div class="point-card reveal">
-        <img src="https://ladieskid.jp/i288/img/2020/Children/point6.jpg" alt="相談・アドバイス">
+        <img src="./images/ご相談アドバイス.png" alt="相談・アドバイス">
         <div class="point-card-body">
           <p class="point-card-num">STEP 06</p>
           <h3 class="point-card-title">ご相談・アドバイス</h3>
